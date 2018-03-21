@@ -13,6 +13,14 @@ namespace MyUrlLibrary.MsTest
             sut.MakeParsing("http://sdsd");
             Assert.IsTrue("http"==sut.scheme);
         }
+
+        [TestMethod]
+        public void IsValidURL() 
+        {
+            var sut = new MyUrlParse();
+            sut.MakeParsing("http://sdsd");
+            Assert.IsTrue(false==sut.valid);
+        }
         
     }
 }
