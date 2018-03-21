@@ -1,0 +1,15 @@
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.deps.json
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.runtimeconfig.json
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.runtimeconfig.dev.json
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.dll
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.pdb
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.dll
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/bin/Debug/netcoreapp2.0/MyUrlLibrary.pdb
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/obj/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.csproj.CoreCompileInputs.cache
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/obj/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.AssemblyInfoInputs.cache
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/obj/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.AssemblyInfo.cs
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/obj/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.dll
+/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/obj/Debug/netcoreapp2.0/MyUrlLibrary.MsTest.pdb
