@@ -48,7 +48,7 @@ namespace MyUrlLibrary.MsTest
             Assert.IsTrue("example.com"==url.host);
         }
 
-        
+
         [TestMethod]
         public void PortTest() {
             var url = new MyUrlParse();
@@ -91,6 +91,7 @@ namespace MyUrlLibrary.MsTest
             Assert.IsTrue("#nose"==url.fragment);
         }
 
+        [TestMethod]
         public void FragmentTestWithoutQuery() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there#nose");
