@@ -8,4 +8,4 @@ To test whether the program is correct or not, I have used the Unit Testing <str
 
 <h2>Higher Runtime Performance</h2>
 
-It is important to mention that it is possible to improve the runtime of the whole program by using the <strong>unbuilt class Uri</strong>. I used it in my program to check if the URL is valid only, but once that it confirms the URL is valid (it does not make an exception), it is possible to get all its components directly. 
+It is important to mention that it is possible to improve the runtime of the whole program by using the <strong>in-built class Uri</strong>. I used it in my program to check if the URL is valid only, but once that it confirms the URL is valid (it does not make an exception), it is possible to get all its components directly. 
