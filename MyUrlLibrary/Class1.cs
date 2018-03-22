@@ -27,8 +27,7 @@ namespace MyUrlLibrary
 
                 index = url.IndexOf(':');
                 scheme = url.Substring(0, index);
-                /// In the following line I am segmenting the original url as I know that the first part is the scheme so I need to analyse only the rest of the string
-                url = url.Substring(index + 1, url.Length - index - 1); 
+                url = url.Substring(index + 1, url.Length - index - 1); /// Need to analyse the rest of the url only
                 
                 ///UserInfo (User, Password)
                  
