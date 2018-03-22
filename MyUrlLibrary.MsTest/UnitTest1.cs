@@ -28,8 +28,16 @@ namespace MyUrlLibrary.MsTest
         public void UserTest() 
         {
             var url = new MyUrlParse();
-            url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
-            Assert.IsTrue(""==url.user);
+            url.MakeParsing("http://username:password@example.com/");
+            Assert.IsTrue("username"==url.user);
+        }
+
+        [TestMethod]
+        public void PasswordTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("http://username:password@example.com/");
+            Assert.IsTrue("password"==url.password);
         }
         
     }
