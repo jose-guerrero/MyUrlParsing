@@ -9,7 +9,12 @@ namespace MyUrlLibrary
         public string password;
         public string host;
         public string port;
+        public string path;
+        public string query;
+        public string fragment;
         public bool valid;
+
+
         
         public void MakeParsing(string s)
         {
@@ -77,6 +82,34 @@ namespace MyUrlLibrary
                     port = temp.Substring(index2 + 1, index - index2 - 1);
                 }
 
+                /// Path Query Fragment
+
+                index = url.IndexOf('?');
+                index2 = url.IndexOf('#');
+                path = url;
+                query = "";
+                fragment = "";
+
+                if (index != -1)
+                {
+                    path = url.Substring(0, index);
+                    if (index2 != -1)
+                    {
+                        query = url.Substring(index, index2 - index);
+                        fragment = url.Substring(index2, url.Length - index2);
+                    }
+                    else
+                    {
+                        query = url.Substring(index, url.Length - index);
+                    }
+                }
+        
+                if (index2 != -1)
+                {
+                    path = url.Substring(0, index2);
+                    fragment = url.Substring(index2, url.Length - index2);
+                }
+                    
             }
             catch
             {

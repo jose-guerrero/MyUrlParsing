@@ -72,5 +72,29 @@ namespace MyUrlLibrary.MsTest
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("8042"==url.port);
         }
+
+        [TestMethod]
+        public void PathTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("/over/there"==url.path);
+        }
+
+        [TestMethod]
+        public void QueryTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("?name=ferret"==url.query);
+        }
+
+        [TestMethod]
+        public void FragmentTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("#nose"==url.fragment);
+        }
     }
 }
