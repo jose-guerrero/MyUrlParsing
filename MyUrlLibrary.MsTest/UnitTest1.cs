@@ -1,4 +1,6 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 
 namespace MyUrlLibrary.MsTest
 {
@@ -7,19 +9,27 @@ namespace MyUrlLibrary.MsTest
     {
 
         [TestMethod]
-        public void GetScheme() 
+        public void SchemeTest() 
         {
-            var sut = new MyUrlParse();
-            sut.MakeParsing("http://sdsd");
-            Assert.IsTrue("http"==sut.scheme);
+            var url = new MyUrlParse();
+            url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
+            Assert.IsTrue("https"==url.scheme);
         }
 
         [TestMethod]
         public void IsValidURL() 
         {
-            var sut = new MyUrlParse();
-            sut.MakeParsing("http://sdsd");
-            Assert.IsTrue(false==sut.valid);
+            var url = new MyUrlParse();
+            url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
+            Assert.IsTrue(true==url.valid);
+        }
+
+        [TestMethod]
+        public void UserTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
+            Assert.IsTrue(""==url.user);
         }
         
     }
