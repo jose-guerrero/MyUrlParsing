@@ -12,6 +12,6 @@ It is important to mention that it is possible to improve the runtime of the who
 
 <h2>References</h2>
 
-Examples using the Uri Class to get components: <strong>"https://www.dotnetperls.com/uri"</strong>
+Examples using the Uri Class to get components: <strong>"https://www.dotnetperls.com/uri"</strong><br />
 Unit Testing with MsTest: <strong>"http://asp.net-hacker.rocks/2017/03/31/unit-testing-with-dotnetcore.html"</strong>
 
