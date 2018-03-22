@@ -9,19 +9,19 @@ namespace MyUrlLibrary.MsTest
     {
 
         [TestMethod]
-        public void SchemeTest() 
-        {
-            var url = new MyUrlParse();
-            url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
-            Assert.IsTrue("https"==url.scheme);
-        }
-
-        [TestMethod]
         public void IsValidURL() 
         {
             var url = new MyUrlParse();
             url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
             Assert.IsTrue(true==url.valid);
+        }
+
+        [TestMethod]
+        public void SchemeTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
+            Assert.IsTrue("https"==url.scheme);
         }
 
         [TestMethod]
@@ -39,6 +39,38 @@ namespace MyUrlLibrary.MsTest
             url.MakeParsing("http://username:password@example.com/");
             Assert.IsTrue("password"==url.password);
         }
+
+        [TestMethod]
+        public void HostTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("example.com"==url.host);
+        }
+
+        [TestMethod]
+        public void HostTestUserInfo() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("example.com"==url.host);
+        }
+
         
+        [TestMethod]
+        public void PortTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("8042"==url.port);
+        }
+
+        [TestMethod]
+        public void PortTestUserInfo() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("8042"==url.port);
+        }
     }
 }

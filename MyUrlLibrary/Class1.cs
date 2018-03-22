@@ -7,12 +7,15 @@ namespace MyUrlLibrary
         public string scheme;
         public string user;
         public string password;
+        public string host;
+        public string port;
         public bool valid;
         
         public void MakeParsing(string s)
         {
             int index,index2;
-            string url = s; 
+            string url = s;
+            string temp; 
 
             try
             {
@@ -55,6 +58,25 @@ namespace MyUrlLibrary
                     }
                     url = url.Substring(index + 1, url.Length - index - 1);
                 }
+
+                /// Host, Port
+                index = url.IndexOf('/');
+                temp = url.Substring(0, index);
+
+                index2 = temp.IndexOf(':');
+                url = url.Substring(index, url.Length - index);
+
+                if (index2 == -1)
+                {
+                    host = temp;
+                    port = "";
+                }
+                else
+                {
+                    host = temp.Substring(0, index2);
+                    port = temp.Substring(index2 + 1, index - index2 - 1);
+                }
+
             }
             catch
             {
