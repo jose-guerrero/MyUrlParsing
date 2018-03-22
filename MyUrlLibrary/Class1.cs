@@ -14,24 +14,21 @@ namespace MyUrlLibrary
         public string fragment;
         public bool valid;
 
-
-        
-        public void MakeParsing(string s)
-        {
+        public void MakeParsing(string s){
             int index,index2;
-            string url = s;
+            string url = s; /// I am using url variable as I will be segmenting the original url once I find its components 
             string temp; 
 
             try
             {
-                Uri myUri = new Uri(url);
+                Uri myUri = new Uri(url); /// If url is not valid then it makes an exception
                 valid = true;
                 ///Scheme
 
                 index = url.IndexOf(':');
-
                 scheme = url.Substring(0, index);
-                url = url.Substring(index + 1, url.Length - index - 1);
+                /// In the following line I am segmenting the original url as I know that the first part is the scheme so I need to analyse only the rest of the string
+                url = url.Substring(index + 1, url.Length - index - 1); 
                 
                 ///UserInfo (User, Password)
                  
@@ -40,17 +37,17 @@ namespace MyUrlLibrary
                  
                 int i = 0;
                  
-                while (url[i]=='/')   
+                while (url[i]=='/') /// Some url contain zero, one or two '/' characters  
                 {
                      i++;
                 }
                 
-                url = url.Substring(i,url.Length - i);
+                url = url.Substring(i,url.Length - i); /// I will segment the Url such as the first character is not '/'
                 index = url.IndexOf('@');
                 
-                if (index != -1)  /// theres @ 
+                if (index != -1)  /// Is there '@' ?
                 {
-                    index2 = url.IndexOf(':');
+                    index2 = url.IndexOf(':'); /// Is there ':'?
                     
                     if (index2 == -1)
                     {
@@ -65,13 +62,13 @@ namespace MyUrlLibrary
                 }
 
                 /// Host, Port
-                index = url.IndexOf('/');
+                index = url.IndexOf('/');  /// Getting the portion (Host:Port) or (Host)
                 temp = url.Substring(0, index);
 
-                index2 = temp.IndexOf(':');
+                index2 = temp.IndexOf(':'); /// index2 helps to know if this segment has port component
                 url = url.Substring(index, url.Length - index);
 
-                if (index2 == -1)
+                if (index2 == -1)   /// If there's no port component then the whole segment is the host
                 {
                     host = temp;
                     port = "";
@@ -90,10 +87,10 @@ namespace MyUrlLibrary
                 query = "";
                 fragment = "";
 
-                if (index != -1)
+                if (index != -1)   /// Is there a 'Query' portion in this part of the url?
                 {
                     path = url.Substring(0, index);
-                    if (index2 != -1)
+                    if (index2 != -1) /// Does the url contain 'Query' and 'Fragment'?
                     {
                         query = url.Substring(index, index2 - index);
                         fragment = url.Substring(index2, url.Length - index2);
@@ -105,7 +102,7 @@ namespace MyUrlLibrary
                 }
                 else
                 {
-                    if (index2 != -1)
+                    if (index2 != -1)   /// Is there a 'Fragment' in this part of the url?
                     {
                         path = url.Substring(0, index2);
                         fragment = url.Substring(index2, url.Length - index2);

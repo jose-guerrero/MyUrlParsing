@@ -1,13 +1,11 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace MyUrlLibrary.MsTest
 {
     [TestClass]
     public class UnitTest1
     {
-
         [TestMethod]
         public void IsValidURL() {
             var url = new MyUrlParse();
