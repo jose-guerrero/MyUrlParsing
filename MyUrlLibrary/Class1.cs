@@ -27,7 +27,6 @@ namespace MyUrlLibrary
                 
                 ///UserInfo (User, Password)
                  
-                index = url.IndexOf("@");          
                 user = "";
                 password = "";
                  
@@ -39,21 +38,22 @@ namespace MyUrlLibrary
                 }
                 
                 url = url.Substring(i,url.Length - i);
+                index = url.IndexOf('@');
                 
                 if (index != -1)  /// theres @ 
                 {
-                    index2 = url.IndexOf(":");
+                    index2 = url.IndexOf(':');
                     
                     if (index2 == -1)
                     {
-                        user = url.Substring(0,index2);
+                        user = url.Substring(0, index);
                     }
                     else
                     {
-                        user = url.Substring(0,index2);
-                        password = url.Substring(index2+1, index-index2-1);
+                        user = url.Substring(0, index2);
+                        password = url.Substring(index2 + 1, index - index2 - 1);
                     }
-                    url = url.Substring(0,index);
+                    url = url.Substring(index + 1, url.Length - index - 1);
                 }
             }
             catch
