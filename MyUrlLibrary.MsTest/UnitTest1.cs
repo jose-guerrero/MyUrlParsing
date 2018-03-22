@@ -90,10 +90,25 @@ namespace MyUrlLibrary.MsTest
         }
 
         [TestMethod]
+        public void QueryEmptyTest() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there#nose");
+            Assert.IsTrue(""==url.query);
+        }
+
+        [TestMethod]
         public void FragmentTest() 
         {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
+            Assert.IsTrue("#nose"==url.fragment);
+        }
+
+        public void FragmentTestWithoutQuery() 
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("foo://user:password@example.com:8042/over/there#nose");
             Assert.IsTrue("#nose"==url.fragment);
         }
     }

@@ -103,13 +103,14 @@ namespace MyUrlLibrary
                         query = url.Substring(index, url.Length - index);
                     }
                 }
-        
-                if (index2 != -1)
+                else
                 {
-                    path = url.Substring(0, index2);
-                    fragment = url.Substring(index2, url.Length - index2);
-                }
-                    
+                    if (index2 != -1)
+                    {
+                        path = url.Substring(0, index2);
+                        fragment = url.Substring(index2, url.Length - index2);
+                    }
+                }     
             }
             catch
             {
