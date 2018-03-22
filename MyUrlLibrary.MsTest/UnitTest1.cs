@@ -9,48 +9,42 @@ namespace MyUrlLibrary.MsTest
     {
 
         [TestMethod]
-        public void IsValidURL() 
-        {
+        public void IsValidURL() {
             var url = new MyUrlParse();
             url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
             Assert.IsTrue(true==url.valid);
         }
 
         [TestMethod]
-        public void SchemeTest() 
-        {
+        public void SchemeTest() {
             var url = new MyUrlParse();
             url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");
             Assert.IsTrue("https"==url.scheme);
         }
 
         [TestMethod]
-        public void UserTest() 
-        {
+        public void UserTest() {
             var url = new MyUrlParse();
             url.MakeParsing("http://username:password@example.com/");
             Assert.IsTrue("username"==url.user);
         }
 
         [TestMethod]
-        public void PasswordTest() 
-        {
+        public void PasswordTest() {
             var url = new MyUrlParse();
             url.MakeParsing("http://username:password@example.com/");
             Assert.IsTrue("password"==url.password);
         }
 
         [TestMethod]
-        public void HostTest() 
-        {
+        public void HostTest() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("example.com"==url.host);
         }
 
         [TestMethod]
-        public void HostTestUserInfo() 
-        {
+        public void HostTestUserInfo() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("example.com"==url.host);
@@ -58,55 +52,48 @@ namespace MyUrlLibrary.MsTest
 
         
         [TestMethod]
-        public void PortTest() 
-        {
+        public void PortTest() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("8042"==url.port);
         }
 
         [TestMethod]
-        public void PortTestUserInfo() 
-        {
+        public void PortTestUserInfo() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("8042"==url.port);
         }
 
         [TestMethod]
-        public void PathTest() 
-        {
+        public void PathTest() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("/over/there"==url.path);
         }
 
         [TestMethod]
-        public void QueryTest() 
-        {
+        public void QueryTest() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("?name=ferret"==url.query);
         }
 
         [TestMethod]
-        public void QueryEmptyTest() 
-        {
+        public void QueryEmptyTest() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there#nose");
             Assert.IsTrue(""==url.query);
         }
 
         [TestMethod]
-        public void FragmentTest() 
-        {
+        public void FragmentTest() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there?name=ferret#nose");
             Assert.IsTrue("#nose"==url.fragment);
         }
 
-        public void FragmentTestWithoutQuery() 
-        {
+        public void FragmentTestWithoutQuery() {
             var url = new MyUrlParse();
             url.MakeParsing("foo://user:password@example.com:8042/over/there#nose");
             Assert.IsTrue("#nose"==url.fragment);
