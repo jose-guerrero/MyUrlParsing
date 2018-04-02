@@ -5716,11 +5716,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/MyUrlLibrary.MsTest.csproj",
+      "projectUniqueName": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary.MsTest/MyUrlLibrary.MsTest.csproj",
       "projectName": "MyUrlLibrary.MsTest",
-      "projectPath": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/MyUrlLibrary.MsTest.csproj",
+      "projectPath": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary.MsTest/MyUrlLibrary.MsTest.csproj",
       "packagesPath": "/Users/joseguerrero/.nuget/packages/",
-      "outputPath": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary.MsTest/obj/",
+      "outputPath": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary.MsTest/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -5737,8 +5737,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/MyUrlLibrary.csproj": {
-              "projectPath": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/MyUrlLibrary.csproj"
+            "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/MyUrlLibrary.csproj": {
+              "projectPath": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/MyUrlLibrary.csproj"
             }
           }
         }

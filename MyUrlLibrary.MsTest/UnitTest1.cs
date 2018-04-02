@@ -14,6 +14,19 @@ namespace MyUrlLibrary.MsTest
         }
 
         [TestMethod]
+        public void IsValidEmptyUrl() {
+            var url = new MyUrlParse();
+            url.MakeParsing("");
+            Assert.IsFalse(true==url.valid);
+        }
+
+        public void IsInvalidURL() {
+            var url = new MyUrlParse();
+            url.MakeParsing("123");
+            Assert.IsFalse(true==url.valid);
+        }
+
+        [TestMethod]
         public void SchemeTest() {
             var url = new MyUrlParse();
             url.MakeParsing("https://www.youtube.com/watch?v=YR12Z8f1Dh8&feature=relmfu");

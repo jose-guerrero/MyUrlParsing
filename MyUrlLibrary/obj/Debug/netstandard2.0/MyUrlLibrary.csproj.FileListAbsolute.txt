@@ -6,3 +6,11 @@
 /Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.AssemblyInfo.cs
 /Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.dll
 /Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.pdb
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/bin/Debug/netstandard2.0/MyUrlLibrary.deps.json
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/bin/Debug/netstandard2.0/MyUrlLibrary.dll
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/bin/Debug/netstandard2.0/MyUrlLibrary.pdb
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.csproj.CoreCompileInputs.cache
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.AssemblyInfoInputs.cache
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.AssemblyInfo.cs
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.dll
+/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/obj/Debug/netstandard2.0/MyUrlLibrary.pdb

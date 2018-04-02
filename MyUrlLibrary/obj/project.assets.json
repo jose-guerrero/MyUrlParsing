@@ -183,11 +183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/MyUrlLibrary.csproj",
+      "projectUniqueName": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/MyUrlLibrary.csproj",
       "projectName": "MyUrlLibrary",
-      "projectPath": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/MyUrlLibrary.csproj",
+      "projectPath": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/MyUrlLibrary.csproj",
       "packagesPath": "/Users/joseguerrero/.nuget/packages/",
-      "outputPath": "/Users/joseguerrero/Projects/test_thursday/MyUrlLibrary/obj/",
+      "outputPath": "/Users/joseguerrero/Projects/urlparse/MyUrlParsing/MyUrlLibrary/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
