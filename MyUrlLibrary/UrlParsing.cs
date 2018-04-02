@@ -14,7 +14,7 @@ namespace MyUrlLibrary
         public string fragment;
         public bool valid;
 
-        public void MakeParsing(string s){
+        public MyUrlParse(string s){
             int index,index2;
             string url = s; /// I am using url variable as I will be segmenting the original url once I find its components 
             string temp; 
@@ -118,12 +118,6 @@ namespace MyUrlLibrary
                 // url is not valid
                 valid = false;
             }
-        }
-
-        static void main()
-        {
-            var url = new MyUrlParse();
-            url.MakeParsing("");
         }
     }
 }
