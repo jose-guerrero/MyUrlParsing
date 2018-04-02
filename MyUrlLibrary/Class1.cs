@@ -108,11 +108,24 @@ namespace MyUrlLibrary
                     }
                 }     
             }
-            catch
+            catch(ArgumentNullException e)
             {
-                valid = false;
-
+                // url is null
+                valid = false; 
+                Console.WriteLine("URI string object is a null reference: {0}",e);
             }
+            catch(UriFormatException e)
+            {
+                // url is not valid
+                valid = false;
+                Console.WriteLine("URI formatting error: {0}",e);
+            }
+        }
+
+        static void main()
+        {
+            var url = new MyUrlParse();
+            url.MakeParsing("");
         }
     }
 }

@@ -20,6 +20,14 @@ namespace MyUrlLibrary.MsTest
             Assert.IsFalse(true==url.valid);
         }
 
+        [TestMethod]
+        public void IsValidNullUrl() {
+            var url = new MyUrlParse();
+            url.MakeParsing(null);
+            Assert.IsFalse(true==url.valid);
+        }
+        
+        [TestMethod] 
         public void IsInvalidURL() {
             var url = new MyUrlParse();
             url.MakeParsing("123");
