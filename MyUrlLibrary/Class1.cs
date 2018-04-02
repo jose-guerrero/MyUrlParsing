@@ -112,13 +112,11 @@ namespace MyUrlLibrary
             {
                 // url is null
                 valid = false; 
-                Console.WriteLine("URI string object is a null reference: {0}",e);
             }
             catch(UriFormatException e)
             {
                 // url is not valid
                 valid = false;
-                Console.WriteLine("URI formatting error: {0}",e);
             }
         }
 
