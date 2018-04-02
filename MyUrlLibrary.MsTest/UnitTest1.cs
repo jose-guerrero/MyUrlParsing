@@ -17,21 +17,21 @@ namespace MyUrlLibrary.MsTest
         public void IsValidEmptyUrl() {
             var url = new MyUrlParse();
             url.MakeParsing("");
-            Assert.IsFalse(true==url.valid);
+            Assert.IsTrue(false==url.valid);
         }
 
         [TestMethod]
         public void IsValidNullUrl() {
             var url = new MyUrlParse();
             url.MakeParsing(null);
-            Assert.IsFalse(true==url.valid);
+            Assert.IsTrue(false==url.valid);
         }
         
         [TestMethod] 
         public void IsInvalidURL() {
             var url = new MyUrlParse();
             url.MakeParsing("123");
-            Assert.IsFalse(true==url.valid);
+            Assert.IsTrue(false==url.valid);
         }
 
         [TestMethod]
